@@ -1,0 +1,9 @@
+{
+  "author": "pon",
+  "name": "io.github.ajpon.vfx-builtin-extension",
+  "displayName": "VFXBuiltinExtension",
+  "description": "Enhanced VFX Graph running on Built-in RP",
+  "version": "0.1.0",
+  "unity": "2021.1",
+  "dependencies": { "com.unity.visualeffectgraph": "https://github.com/LastAbyss/unity-visualeffectgraph-builtin.git" }
+}
