@@ -9553,12 +9553,12 @@ MonoBehaviour:
   - {fileID: 8926484042661615091}
   m_OutputSlots: []
   m_Label: 
-  m_Data: {fileID: 8926484042661615229}
+  m_Data: {fileID: 8926484042661615230}
   m_InputFlowSlot:
   - link: []
   m_OutputFlowSlot:
   - link: []
-  blendMode: 0
+  blendMode: 3
   useAlphaClipping: 0
   generateMotionVector: 0
   excludeFromTAA: 0
@@ -10076,7 +10076,7 @@ MonoBehaviour:
   - {fileID: 8926484042661615129}
   - {fileID: 8926484042661615115}
   - {fileID: 8926484042661615168}
-  m_UIPosition: {x: 1432, y: 1157}
+  m_UIPosition: {x: 1433, y: 1157}
   m_UICollapsed: 0
   m_UISuperCollapsed: 0
   m_InputSlots:
@@ -10885,7 +10885,7 @@ MonoBehaviour:
   m_InputSlots:
   - {fileID: 8926484042661615185}
   m_OutputSlots: []
-  m_Disabled: 1
+  m_Disabled: 0
   attribute: color
   Composition: 2
   Source: 0
@@ -10919,7 +10919,7 @@ MonoBehaviour:
       m_Type:
         m_SerializableType: UnityEngine.Vector3, UnityEngine.CoreModule, Version=0.0.0.0,
           Culture=neutral, PublicKeyToken=null
-      m_SerializableObject: '{"x":0.27358490228652956,"y":0.27358490228652956,"z":0.27358490228652956}'
+      m_SerializableObject: '{"x":0.8999999761581421,"y":0.8999999761581421,"z":0.8999999761581421}'
     m_Space: 2147483647
   m_Property:
     name: Color
@@ -11680,7 +11680,7 @@ MonoBehaviour:
         PublicKeyToken=b77a5c561934e089
   m_Direction: 0
   m_LinkedSlots: []
---- !u!114 &8926484042661615229
+--- !u!114 &8926484042661615230
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

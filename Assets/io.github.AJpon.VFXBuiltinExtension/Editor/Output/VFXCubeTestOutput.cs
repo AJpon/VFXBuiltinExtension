@@ -11,7 +11,7 @@ namespace UnityEditor.VFX.BuiltinExtension
     [VFXInfo(experimental=true)]
     class VFXCubeTestOutput : VFXAbstractParticleOutput
     {
-        public override string name { get { return "Output Particle Cube (Test)"; } }
+        public override string name { get { return "Output Particle Rim-lit Cube"; } }
         public override string codeGeneratorTemplate { get { return RenderPipeTemplate("VFXParticleCube"); } }
         public override VFXTaskType taskType { get { return VFXTaskType.ParticleHexahedronOutput; } }
 

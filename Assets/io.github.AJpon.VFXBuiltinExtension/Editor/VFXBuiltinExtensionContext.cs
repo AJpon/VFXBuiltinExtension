@@ -9,8 +9,11 @@ namespace UnityEditor.VFX.BuiltinExtension
     {
         public static string BuiltinExtensionTemplate(string fileName)
         {
-            // return AssetDatabase.GetAssetPath(MonoScript.FromScriptableObject(this)) + "/Shader/Templates/" + fileName;
-            return "Assets/io.github.AJpon.VFXBuiltinExtension/Editor/Shader/Templates/" + fileName;
+#if DEBUG_VFXBUILTIN
+            return "Assets/io.github.AJpon.VFXBuiltinExtension/Shader/Templates/" + fileName;
+#else
+            return "Packages/io.github.AJpon.VFXBuiltinExtension/Shader/Templates/" + fileName;
+#endif
         }
     }
 }
