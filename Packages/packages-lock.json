@@ -136,6 +136,14 @@
       },
       "hash": "9d392c9bc18cff18762af20be789770206a710ba"
     },
+    "io.github.ajpon.vfx-builtin-extension": {
+      "version": "file:io.github.AJpon.VFXBuiltinExtension",
+      "depth": 0,
+      "source": "embedded",
+      "dependencies": {
+        "com.unity.visualeffectgraph": "https://github.com/LastAbyss/unity-visualeffectgraph-builtin.git"
+      }
+    },
     "com.unity.modules.ai": {
       "version": "1.0.0",
       "depth": 0,

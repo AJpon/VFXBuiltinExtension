@@ -1,0 +1,10 @@
+{
+	SubShader
+	{	
+		Cull Back
+		
+		${VFXInclude("Shaders/VFXParticleHeader.template")}
+		${VFXInclude("../io.github.AJpon.VFXBuiltinExtension/Shaders/ParticleHexahedron/PassForwardLit.template")}
+		${VFXInclude("../io.github.AJpon.VFXBuiltinExtension/Shaders/ParticleHexahedron/PassShadowCaster.template"),USE_CAST_SHADOWS_PASS}
+	}
+}
