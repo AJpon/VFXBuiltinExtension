@@ -11,7 +11,7 @@ Pass
 	
 	struct ps_input
 	{
-		float4 pos : SV_POSITION;
+		// float4 pos : SV_POSITION;
 		float3 offsets : TEXCOORD0;
 		#if VFX_NEEDS_COLOR_INTERPOLATOR
 		nointerpolation float4 color : COLOR0;
@@ -47,6 +47,7 @@ Pass
 		#endif
 		#ifdef VFX_FEATURE_SHADOWCASTING_RECEIVE
 		float4 shadowCoord : TEXCOORD9;
+		// float2 screenPos : VPOS;
 		#endif
 		
 		UNITY_VERTEX_OUTPUT_STEREO
@@ -102,16 +103,15 @@ o.shadowCoord = mul(unity_WorldToShadow[0], float4(vPosWS, 1.0f));
 ${VFXEnd}
 
 	${VFXPassForwardDefine}
-	${VFXInclude("Shaders/ParticleHexahedron/Pass.template")}
+	${VFXInclude("../io.github.AJpon.VFXBuiltinExtension/Shaders/ParticleHexahedron/Pass.template")}
 
 #ifdef VFX_FEATURE_SHADOWCASTING_RECEIVE
-	// Includes        
-    // #include "Packages/io.github.ajpon.vfx-builtin-extension/Shaders/ShaderLibrary/ShaderGraph/Lighting_test.hlsl"
+	// Includes
 	#include "Packages/io.github.ajpon.vfx-builtin-extension/Shaders/VFXCommon.hlsl"
 #endif
 
 	#pragma fragment frag
-	ps_output frag(ps_input i)
+	ps_output frag(ps_input i, UNITY_VPOS_TYPE screenPos : VPOS)
 	{
 		UNITY_SETUP_STEREO_EYE_INDEX_POST_VERTEX(i);
 		ps_output o = (ps_output)0;
@@ -123,15 +123,16 @@ ${VFXEnd}
 		VFXClipFragmentColor(o.color.a,i);
 
 #ifdef VFX_FEATURE_SHADOWCASTING_RECEIVE
-#ifdef VFX_VARYING_POSWS
-		float4 screenPos = float4(VFXTransformPositionWorldToView(i.VFX_VARYING_POSWS), 0.0f);
-		half atten = VFXComputeForwardShadows(i.shadowCoord, i.VFX_VARYING_POSWS, screenPos);
+		float atten = VFXComputeForwardShadows(float4(screenPos.xy, 0.0f, 0.0f));
+		atten = remap(0.0f, 1.0f, 0.4f, 1.0f, atten);
 		o.color *= atten;
-		// o.color *= 0.1h;
 		// o.color = i.shadowCoord;
-		// o.color = screenPos;
-		o.color = half4(atten,atten,atten,1.0h);
-#endif
+		// o.color = float4(screenPos.xy, 0.0f, 0.0f);
+		// o.color = float4(atten,atten,atten,1.0h);
+
+		// test code
+		// float depth = VFXSampleDepthTest(screenPos);
+		// o.color = float4(depth,atten,depth,1.0f);
 #endif
 
 #if VFX_FEATURE_MOTION_VECTORS_FORWARD

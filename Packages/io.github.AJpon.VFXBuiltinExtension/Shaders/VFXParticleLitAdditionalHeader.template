@@ -1,0 +1,3 @@
+${VFXBegin:VFXPassForwardAdditionalPragma}
+#pragma multi_compile_fwdbase
+${VFXEnd}

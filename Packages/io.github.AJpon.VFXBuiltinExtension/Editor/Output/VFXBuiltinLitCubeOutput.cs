@@ -8,9 +8,7 @@ using UnityEditor.VFX;
 
 namespace UnityEditor.VFX.BuiltinExtension
 {
-#if DEBUG_VFXBUILTIN
     [VFXInfo]
-#endif
     class VFXBuiltinLitCubeOutput : VFXAbstractParticleOutput
     {
         public override string name { get { return "Output Particle Lit Cube"; } }
