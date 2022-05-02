@@ -103,7 +103,7 @@ o.shadowCoord = mul(unity_WorldToShadow[0], float4(vPosWS, 1.0f));
 ${VFXEnd}
 
 	${VFXPassForwardDefine}
-	${VFXInclude("../io.github.AJpon.VFXBuiltinExtension/Shaders/ParticleHexahedron/Pass.template")}
+	${VFXInclude("../io.github.ajpon.vfx-builtin-extension/Shaders/ParticleHexahedron/Pass.template")}
 
 #ifdef VFX_FEATURE_SHADOWCASTING_RECEIVE
 	// Includes

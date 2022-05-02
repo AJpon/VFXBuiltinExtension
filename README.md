@@ -12,4 +12,4 @@ VFXBuiltinExtension is a VFX Graph extension for Unity Built-in RP
 This package is provided in UPM
 1. Open Package Manager.
 2. Click `+` > `Add package from git URL...`
-3. Enter `https://github.com/AJpon/VFXBuiltinExtension.git?path=/Packages/io.github.AJpon.VFXBuiltinExtension`
+3. Enter `https://github.com/AJpon/VFXBuiltinExtension.git?path=/Packages/io.github.ajpon.vfx-builtin-extension`

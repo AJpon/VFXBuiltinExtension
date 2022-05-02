@@ -137,7 +137,7 @@
       "hash": "9d392c9bc18cff18762af20be789770206a710ba"
     },
     "io.github.ajpon.vfx-builtin-extension": {
-      "version": "file:io.github.AJpon.VFXBuiltinExtension",
+      "version": "file:io.github.ajpon.vfx-builtin-extension",
       "depth": 0,
       "source": "embedded",
       "dependencies": {

@@ -9,7 +9,7 @@ namespace UnityEditor.VFX.BuiltinExtension
     {
         public static string BuiltinExtensionTemplate(string fileName)
         {
-            return "Packages/io.github.AJpon.VFXBuiltinExtension/Shaders/Templates/" + fileName;
+            return "Packages/io.github.ajpon.vfx-builtin-extension/Shaders/Templates/" + fileName;
         }
     }
 }
