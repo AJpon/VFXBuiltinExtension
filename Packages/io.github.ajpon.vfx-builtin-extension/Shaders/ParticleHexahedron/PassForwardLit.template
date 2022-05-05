@@ -125,7 +125,7 @@ ${VFXEnd}
 #ifdef VFX_FEATURE_SHADOWCASTING_RECEIVE
 		float atten = VFXComputeForwardShadows(float4(screenPos.xy, 0.0f, 0.0f));
 		atten = remap(0.0f, 1.0f, 0.4f, 1.0f, atten);
-		o.color *= atten;
+		o.color *= float4(atten, atten, atten, 1.0f);
 		// o.color = i.shadowCoord;
 		// o.color = float4(screenPos.xy, 0.0f, 0.0f);
 		// o.color = float4(atten,atten,atten,1.0h);
