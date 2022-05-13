@@ -5,7 +5,7 @@
 		
 		${VFXInclude("Shaders/VFXParticleHeader.template")}
 		${VFXInclude("../io.github.ajpon.vfx-builtin-extension/Shaders/ParticleHexahedron/PassForwardLit.template")}
-		${VFXInclude("../io.github.ajpon.vfx-builtin-extension/Shaders/VFXParticleLitAdditionalHeader.template")}
+		// ${VFXInclude("../io.github.ajpon.vfx-builtin-extension/Shaders/VFXParticleLitAdditionalHeader.template")}
 		${VFXInclude("../io.github.ajpon.vfx-builtin-extension/Shaders/ParticleHexahedron/PassShadowCaster.template"),USE_CAST_SHADOWS_PASS}
 	}
 }

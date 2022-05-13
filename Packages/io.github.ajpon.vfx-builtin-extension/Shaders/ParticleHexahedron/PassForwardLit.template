@@ -47,7 +47,6 @@ Pass
 		#endif
 		#ifdef VFX_FEATURE_SHADOWCASTING_RECEIVE
 		float4 shadowCoord : TEXCOORD9;
-		// float2 screenPos : VPOS;
 		#endif
 		
 		UNITY_VERTEX_OUTPUT_STEREO
@@ -98,7 +97,6 @@ Pass
 ${VFXBegin:VFXVertexAdditionalProcess}
 #ifdef VFX_FEATURE_SHADOWCASTING_RECEIVE
 o.shadowCoord = mul(unity_WorldToShadow[0], float4(vPosWS, 1.0f));
-// o.shadowCoord = float4(VFXTransformPositionWorldToView(vPosWS), 1.0f);
 #endif
 ${VFXEnd}
 
